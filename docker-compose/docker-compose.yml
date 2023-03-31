@@ -11,6 +11,6 @@ services:
       TZ: Asia/Shanghai
       API_KEY: xxx # openai的api key
       PASSWORD: vector
-      WEB_PORT：17474 # 修改成你自己映射的端口
+      WEB_PORT: 17474 # 修改成你自己映射的端口
       
       
