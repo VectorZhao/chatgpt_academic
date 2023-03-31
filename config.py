@@ -30,6 +30,8 @@ TIMEOUT_SECONDS = 25
 
 # 网页的端口, -1代表随机端口
 WEB_PORT = -1
+if os.getenv("WEB_PORT") != None:
+    proxies = {os.getenv("WEB_PORT")}
 
 # 如果OpenAI不响应（网络卡顿、代理失败、KEY失效），重试的次数限制
 MAX_RETRY = 2
