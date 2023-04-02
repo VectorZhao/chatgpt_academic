@@ -1,5 +1,12 @@
 # [step 1]>> 例如： API_KEY = "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" （此key无效）
 API_KEY = "sk-此处填API密钥"
+if os.getenv("API_KEY") != None:
+    API_KEY = os.getenv("API_KEY")
+if os.getenv("API_URL") != None:
+    API_URL = os.getenv("API_URL")
+if os.getenv("PASSWORD") != None:
+    AUTHENTICATION= [("admin", os.getenv("PASSWORD"))]
+
 
 # [step 2]>> 改为True应用代理，如果直接在海外服务器部署，此处不修改
 USE_PROXY = False
