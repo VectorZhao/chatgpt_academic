@@ -10,7 +10,7 @@ def main():
         get_conf('proxies', 'WEB_PORT', 'LLM_MODEL', 'CONCURRENT_COUNT', 'AUTHENTICATION', 'CHATBOT_HEIGHT', 'LAYOUT', 'AVAIL_LLM_MODELS', 'AUTO_CLEAR_TXT')
     ENABLE_AUDIO, AUTO_CLEAR_TXT = get_conf('ENABLE_AUDIO', 'AUTO_CLEAR_TXT')
     # 如果WEB_PORT是-1, 则随机选取WEB端口
-    PORT = os.getenv('PORT')
+    PORT = int(os.getenv('PORT'))
 
     if not AUTHENTICATION: AUTHENTICATION = None
 
